@@ -7,7 +7,7 @@
 #define BLUE_INTENSITY   255
 #define WHITE_INTENSITY  255
 
-#define RANET_MAX_SIZE  68
+#define RANET_MAX_SIZE  64
 #define DISCONNECT_TIMEOUT  2000
 
 #define LastFallback0  100 // Memory location for fallback storage
@@ -104,7 +104,7 @@ void loop()
                 byte newdata=(RANetData[18+a]);    //LSB
                 byte newdata1=(RANetData[18+a+1]);  //MSB
                 Wire.beginTransmission(0x40);
-                Wire.write(0x8+(4*a));
+                Wire.write(0x8+(4*(a/2)));
                 Wire.write(newdata);
                 Wire.write(newdata1);
                 Wire.endTransmission();
