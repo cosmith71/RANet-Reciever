@@ -7,7 +7,7 @@
 #define BLUE_INTENSITY   255
 #define WHITE_INTENSITY  255
 
-#define RANET_MAX_SIZE  64
+#define RANET_MAX_SIZE  68
 #define DISCONNECT_TIMEOUT  2000
 
 #define LastFallback0  100 // Memory location for fallback storage
